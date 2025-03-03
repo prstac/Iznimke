@@ -9,8 +9,8 @@ public class ZadatakBrojIznimka {
     public static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
 
-        int prvi = unosBrojaREekurzivnoNaKriviParse();
-        int drugi = unosBrojaREekurzivnoNaKriviParse();
+        int prvi = unosBrojaRekurzivnoNaKriviParse();
+        int drugi = unosBrojaRekurzivnoNaKriviParse();
 
         int zbroj = prvi + drugi;
         System.out.println("Zbroj je : " + zbroj);
@@ -21,7 +21,7 @@ public class ZadatakBrojIznimka {
     }
 
 
-    public static int unosBrojaREekurzivnoNaKriviParse() {
+    public static int unosBrojaRekurzivnoNaKriviParse() {
         int broj = 0;
         try {
             System.out.println("Unesite broj");
@@ -29,7 +29,7 @@ public class ZadatakBrojIznimka {
         }
         catch (NumberFormatException e) {
             System.out.println("Krivi unos");
-            broj = unosBrojaREekurzivnoNaKriviParse();
+            broj = unosBrojaRekurzivnoNaKriviParse();
         }
         return broj;
     }
