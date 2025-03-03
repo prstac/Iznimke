@@ -25,6 +25,9 @@ public class ViseVRstiIznimki {
         catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("Greška pri pristupu elementu iz polja");
         }
+        catch (ArithmeticException e) {
+            System.out.println(e.getMessage());
+        }
         catch (Exception e) {
             System.out.println("Sve ostale greške.");
 
