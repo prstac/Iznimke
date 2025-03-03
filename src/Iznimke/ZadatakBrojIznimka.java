@@ -1,6 +1,5 @@
 package Iznimke;
 
-import java.security.PrivateKey;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -10,18 +9,19 @@ public class ZadatakBrojIznimka {
     public static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
 
-        int prvi = unosBroja();
-        int drugi = unosBroja();
+        int prvi = unosBrojaREekurzivnoNaKriviParse();
+        int drugi = unosBrojaREekurzivnoNaKriviParse();
 
         int zbroj = prvi + drugi;
         System.out.println("Zbroj je : " + zbroj);
 
-        prvi = unosBroja2();
-        drugi = unosBroja2();
+        prvi = unosBrojaSWhileNaKriviInput();
+        drugi = unosBrojaSWhileNaKriviInput();
         System.out.println("Zbroj je : " + prvi + drugi);
     }
 
-    public static int unosBroja() {
+
+    public static int unosBrojaREekurzivnoNaKriviParse() {
         int broj = 0;
         try {
             System.out.println("Unesite broj");
@@ -29,12 +29,12 @@ public class ZadatakBrojIznimka {
         }
         catch (NumberFormatException e) {
             System.out.println("Krivi unos");
-            broj = unosBroja();
+            broj = unosBrojaREekurzivnoNaKriviParse();
         }
         return broj;
     }
 
-    public static int unosBroja2() {
+    public static int unosBrojaSWhileNaKriviInput() {
         int broj = 0;
         while (true) {
             try {
