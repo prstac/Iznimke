@@ -29,9 +29,15 @@ public class Main {
                 var brojnik = Integer.parseInt(linijaArray[0]);
                 var nazivnik = Integer.parseInt(linijaArray[1]);
 
+                if (nazivnik == 0) {
+                    throw new Exception("Nazivnik ne moze biti 0");
+                }
+
                 return new Razlomak(brojnik, nazivnik);
             } catch (NumberFormatException e) {
                 System.out.println("Niste unijeli ispravan broj");
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
             }
         } while (true);
     }
