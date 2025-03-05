@@ -2,7 +2,7 @@ package Iznimke;
 
 import java.util.Random;
 
-public class ViseVRstiIznimki {
+public class ViseVrstiIznimki {
     public static void main(String[] args) {
         int broj = 0;
         String unos = "234d";
