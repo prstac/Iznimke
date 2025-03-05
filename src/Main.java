@@ -18,7 +18,6 @@ public class Main {
     }
 
     public static Razlomak unosRazlomka(String message) {
-        Razlomak razlomak;
         do {
             System.out.println("Unesite " + message + " razlomak (brojnik nazivnik)");
             try {

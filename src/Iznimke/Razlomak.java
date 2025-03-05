@@ -48,7 +48,6 @@ public class Razlomak {
 
     public Razlomak minus(Razlomak drugi) {
         int a = this.brojnik * predznak;
-        Razlomak rezultat;
         if (this.nazivnik == drugi.nazivnik) {
             a-=drugi.brojnik * drugi.predznak;
             return new Razlomak(a, this.nazivnik);
@@ -62,6 +61,7 @@ public class Razlomak {
     @Override
     public String toString() {
         if (brojnik == 0) return "0";
+        if (brojnik == nazivnik) return Math.signum(predznak) == 1? "1": "-1";
         return (Math.signum(predznak) == 1? "": "-") + brojnik + "/" + nazivnik;
     }
 }
